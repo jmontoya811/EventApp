@@ -14,13 +14,14 @@
       </ul>
     </div>
   <% end %>
-
-  <div class="field">
+<div class="row">
+<div class="col-md-6">
+  <div class="form-group">
     <%= form.label :title %>
     <%= form.text_field :title, id: :event_title %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :description %>
     <%= form.text_area :description, id: :event_description %>
   </div>
@@ -34,33 +35,35 @@
     <%= form.radio_button :event_type, 'Private_event' %>
     <%= form.label :event_type, 'Private' %>
   </div>
+</div>
 
-    <div class="field">
+<div class="col-md-6">
+    <div class="form-group">
       <%= form.label :main_image %>
       <%= form.file_field :main_image %>
     
     </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :date %>
     <%= form.date_select :date, id: :event_date %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :time %>
     <%= form.time_select :time, id: :event_time %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :location %>
     <%= form.text_field :location, id: :event_location %>
   </div>
+</div>
+</div>
 
   <div class="actions">
-    <button type="button" class="btn btn-info">
-     <%= form.submit %>
+     <%= form.submit 'New Event', class: 'btn btn-success btn-block' %>
     </div>
-  </button>
 <% end %>
 
 
