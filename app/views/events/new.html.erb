@@ -1,5 +1,6 @@
-<h1>New Bottega Event</h1>
+<h1>New <%= image_tag "btgblack.png" %> Event</h1>
+<hr>
 
 <%= render 'form', event: @event %>
 
-<%= link_to 'Back', events_path %>
+<%= link_to 'Back', events_path, class: 'btn btn-warning btn-block' %>
